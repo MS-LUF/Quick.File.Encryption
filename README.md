@@ -1,5 +1,5 @@
 # Quick.File.Encryption
-a toolbox to encrypt automatically file in a folder (FileSystemWatcher) using Cryptographic Message Syntax format (CMS) and a public key (certificate)
+a toolbox to encrypt (protect-cmsmessage) automatically file in a folder (FileSystemWatcher) using Cryptographic Message Syntax format (CMS) and a public key (certificate)
 
 (c) 2018 lucas-cueff.com Distributed under Artistic Licence 2.0 (https://opensource.org/licenses/artistic-license-2.0).
 
@@ -33,3 +33,15 @@ Use Watch-And_Encrypt.ps1 with C:\temp as TargetFolder parameter, c:\temp2\test.
 ```
 ### Result
 the source file is copied and encrypted into *.enc file and source file is automatically removed after that.
+
+## Decrypt
+Import the QuickFileEncryption if you have encrypted binary (optional)
+Import the cetificate with the private key locally (and trust the AC linked also)
+### Non binary file
+```
+	C:\PS> Unprotect-CmsMessage -Path C:\temp\your.txt.enc
+```
+### binary file
+```
+	C:\PS> Unprotect-CmsMessage -Path C:\temp\your.exe.enc | ConvertFrom-Base64ToBinaryFile -OutputFilePath C:\temp\your.exe
+```
