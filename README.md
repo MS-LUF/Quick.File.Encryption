@@ -1,7 +1,8 @@
+![image](https://www.lucas-cueff.com/files/gallery.png)
 # Quick.File.Encryption
 a toolbox to encrypt (protect-cmsmessage) automatically file in a folder (FileSystemWatcher) using Cryptographic Message Syntax format (CMS) and a public key (certificate)
 
-(c) 2018 lucas-cueff.com Distributed under Artistic Licence 2.0 (https://opensource.org/licenses/artistic-license-2.0).
+(c) 2018-2019 lucas-cueff.com Distributed under Artistic Licence 2.0 (https://opensource.org/licenses/artistic-license-2.0).
 
 ## Description
 This toolbox can be used to watch (FileSystemWatcher - inotify) a folder and encrypt automatically new file created using the CMS format https://en.wikipedia.org/wiki/Cryptographic_Message_Syntax and a valid public key (OID and key usage speaking)
